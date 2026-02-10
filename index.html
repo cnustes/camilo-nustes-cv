@@ -3,230 +3,636 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Camilo Ñustes | Senior Software Developer</title>
-    <meta name="description" content="Senior Software Developer & Backend Architect specializing in Java, Spring Boot, and AI Integration. Founder of CottonTopTech.">
-    
+    <title>Camilo Ñustes | Senior Backend Engineer — Java, Cloud & Microservices</title>
+    <meta name="description" content="Senior Backend Engineer with 12+ years of experience delivering high-stakes software craftsmanship. Expert in Java, Spring Boot, Cloud (AWS), and Microservices architectures.">
+    <meta name="keywords" content="Senior Backend Engineer, Java, Spring Boot, Microservices, AWS, Cloud, SRE, Kafka, Docker, Software Developer">
+    <meta name="author" content="Camilo Ñustes">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Camilo Ñustes | Senior Backend Engineer">
+    <meta property="og:description" content="12+ years delivering high-stakes software craftsmanship. Java, Cloud & Microservices specialist.">
+    <meta property="og:type" content="website">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Icons (Phosphor Icons or FontAwesome) -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
 
+    <!-- Animated Background Grid -->
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+
     <!-- Header -->
-    <header>
+    <header id="site-header">
         <div class="container">
-            <nav>
-                <div class="logo">
-                    Camilo <span class="text-gradient">Ñustes</span>
+            <nav aria-label="Main Navigation">
+                <div class="logo" id="nav-logo">
+                    <span class="logo-bracket">&lt;</span>Camilo<span class="text-gradient">Ñustes</span><span class="logo-bracket"> /&gt;</span>
                 </div>
-                <ul class="nav-links">
+                <ul class="nav-links" id="nav-links">
                     <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#tech-dna">Tech DNA</a></li>
+                    <li><a href="#innovation-lab">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container hero-content">
-            <span class="hero-subtitle">Senior Software Developer</span>
-            <h1>
-                Building Scalable <br>
-                <span class="text-gradient">Backend Architecture</span>
-            </h1>
-            <p>
-                Founder of CottonTopTech. Expert in Java Ecosystem, Cloud Solutions, and AI Integration. 
-                I transform complex logic into high-performance systems.
-            </p>
-            <div class="hero-actions">
-                <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                <a href="#projects" class="btn btn-outline">View Work</a>
-            </div>
-        </div>
-        
-        <div class="scroll-down">
-            <i class="ph ph-arrow-down"></i>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">About <span>Me</span></h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>
-                        I am a <strong>Senior Software Developer</strong> and <strong>founding mind behind CottonTopTech</strong>, 
-                        driven by nature-inspired agility and high-tech logic. With over a decade of experience, 
-                        I specialize in building robust backend architectures and integrating cutting-edge AI solutions.
-                    </p>
-                    <p>
-                        My expertise lies in the <strong>Java Ecosystem (Spring Boot)</strong> and <strong>Microservices</strong>, 
-                        where I've consistently transformed complex business requirements into scalable, high-performance systems. 
-                        I value clean code, engineering excellence, and the continuous pursuit of innovation.
-                    </p>
+    <main>
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- HERO SECTION -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <div class="terminal-window hero-terminal" aria-hidden="true">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">camilo@backend ~ $</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p class="terminal-line"><span class="terminal-prompt">$</span> <span class="terminal-cmd">whoami</span></p>
+                        <p class="terminal-output" id="typing-output"></p>
+                    </div>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <h3>10+</h3>
-                        <p>Years Experience</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>20+</h3>
-                        <p>Projects Delivered</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>AI</h3>
-                        <p>Integration Expert</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>Cloud</h3>
-                        <p>Native Architect</p>
-                    </div>
+
+                <span class="hero-subtitle">Senior Backend Engineer</span>
+                <h1>
+                    Crafting <span class="text-gradient">High-Performance</span><br>
+                    Backend Systems
+                </h1>
+                <p class="hero-description">
+                    12+ years of professional experience delivering high-stakes software craftsmanship. 
+                    Pragmatic, bilingual (C1), SRE-focused, and AI-enabled developer specializing in 
+                    <strong>Java</strong>, <strong>Cloud</strong> &amp; <strong>Microservices</strong>.
+                    My goal is always to deliver value through high-quality engineering.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary" id="hero-cta-contact">
+                        <i class="ph ph-envelope-simple"></i> Get in Touch
+                    </a>
+                    <a href="#experience" class="btn btn-outline" id="hero-cta-work">
+                        <i class="ph ph-briefcase"></i> View Experience
+                    </a>
+                </div>
+
+                <div class="hero-badges">
+                    <span class="hero-badge"><i class="ph ph-coffee"></i> Java 8/11/17+</span>
+                    <span class="hero-badge"><i class="ph ph-cloud"></i> AWS</span>
+                    <span class="hero-badge"><i class="ph ph-git-branch"></i> Microservices</span>
+                    <span class="hero-badge"><i class="ph ph-chart-line-up"></i> SRE</span>
+                    <span class="hero-badge"><i class="ph ph-robot"></i> AI-Enabled</span>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Professional <span>History</span></h2>
-            <div class="timeline">
-                
-                <!-- Experience 1 -->
-                <div class="timeline-item left">
-                    <div class="content-card">
-                        <h3>Senior Technical Consultant</h3>
-                        <span class="company">Perficient | Remote</span>
-                        <span class="date">Nov 2021 - Present</span>
-                        <ul>
-                            <li>
-                                <strong>Action:</strong> Orchestrated the migration from legacy monolithic systems to scalable Microservices.
-                                <br><strong>Context:</strong> Working on high-traffic financial APIs requiring zero downtime.
-                                <br><strong>Result:</strong> Improved system modularity and deployment velocity for business-critical operations.
-                            </li>
-                            <li>
-                                <strong>Action:</strong> Optimized API interactions between UI, Spring Boot backend, and Oracle Databases.
-                                <br><strong>Context:</strong> End-to-end feature implementation for a major client.
-                                <br><strong>Result:</strong> Reduced latency and enhanced data integrity across the platform.
-                            </li>
-                            <li>
-                                <strong>Action:</strong> Implemented comprehensive testing strategies (JUnit, SonarQube, Gatling).
-                                <br><strong>Context:</strong> Ensuring code quality in a CI/CD environment.
-                                <br><strong>Result:</strong> Maintained high code coverage and performance standards.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Experience 2 -->
-                <div class="timeline-item right">
-                    <div class="content-card">
-                        <h3>Lead / Full Stack Developer</h3>
-                        <span class="company">Sophos Solutions | Remote</span>
-                        <span class="date">Apr 2021 - Nov 2022</span>
-                        <ul>
-                            <li>
-                                <strong>Action:</strong> Led a team of junior developers in designing REST/SOAP services.
-                                <br><strong>Context:</strong> Developing robust integrations using Oracle Service Bus (OSB) for the financial sector.
-                                <br><strong>Result:</strong> Successfully delivered complex service contracts and fostered team growth through mentorship.
-                            </li>
-                            <li>
-                                <strong>Action:</strong> Developed Proof of Concepts (PoCs) for Cloud migration.
-                                <br><strong>Context:</strong> Transitioning services to AWS Microservices architecture.
-                                <br><strong>Result:</strong> Validated architectural decisions that paved the way for modernization.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                 <!-- Experience 3 -->
-                 <div class="timeline-item left">
-                    <div class="content-card">
-                        <h3>Intermediate Engineer</h3>
-                        <span class="company">Software One / Intergrupo | Colombia</span>
-                        <span class="date">Aug 2019 - Apr 2021</span>
-                        <ul>
-                            <li>
-                                <strong>Action:</strong> Orchestrated multi-technological service integrations.
-                                <br><strong>Context:</strong> Serving major clients like Banco W and Ecopetrol.
-                                <br><strong>Result:</strong> Automated committee meeting creations via PowerApps and streamlined banking microservices.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                 <!-- Experience 4 -->
-                 <div class="timeline-item right">
-                    <div class="content-card">
-                        <h3>Java Developer Engineer</h3>
-                        <span class="company">Takum Solutions | Colombia</span>
-                        <span class="date">Jan 2018 - Jul 2019</span>
-                        <ul>
-                            <li>
-                                <strong>Action:</strong> Developed core business logic using SOA principles.
-                                <br><strong>Context:</strong> Implementing REST services and Alfresco BPM workflows.
-                                <br><strong>Result:</strong> Delivered robust backend functionality exposed to Angular JS frontends.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
+            <div class="scroll-down" aria-hidden="true">
+                <i class="ph ph-caret-double-down"></i>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact / Footer -->
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- ABOUT SECTION -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section id="about" class="section-padding">
+            <div class="container">
+                <h2 class="section-title"><span class="code-comment">// </span>About <span>Me</span></h2>
+                <div class="about-grid">
+                    <article class="about-text glass-card">
+                        <div class="about-photo-wrapper">
+                            <img src="assets/img/camilo-nustes.png" alt="Camilo Ñustes — Senior Backend Engineer" class="about-photo" width="180" height="180">
+                        </div>
+                        <p>
+                            I am a <strong>Senior Backend Engineer</strong> with over <strong>12 years</strong> of professional experience (active since 2013). 
+                            My journey has taught me that the best technology is simply the one that solves the client's problem most efficiently.
+                        </p>
+                        <p>
+                            I have had the opportunity to work on high-complexity projects across various industries — including 
+                            <strong>Finance, Healthcare, Manufacturing, e-Commerce, Oil &amp; Gas</strong>, and <strong>Telecommunications</strong> — 
+                            consistently adapting to their unique standards and technical requirements.
+                        </p>
+                        <div class="about-mindset">
+                            <div class="mindset-item">
+                                <i class="ph ph-stack"></i>
+                                <div>
+                                    <h4>Generalist by Choice</h4>
+                                    <p>Comfortable navigating the entire development stack and lifecycle, from initial user story analysis to final technical deployment.</p>
+                                </div>
+                            </div>
+                            <div class="mindset-item">
+                                <i class="ph ph-shield-check"></i>
+                                <div>
+                                    <h4>Focus on Stability</h4>
+                                    <p>Hands-on experience improving the performance and stability of applications in high-stakes production environments, particularly through SRE practices.</p>
+                                </div>
+                            </div>
+                            <div class="mindset-item">
+                                <i class="ph ph-brain"></i>
+                                <div>
+                                    <h4>Active Curiosity</h4>
+                                    <p>Currently integrating AI tools into my daily workflow to enhance code quality and tackle personal and professional challenges with greater agility and insight.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <div class="about-stats">
+                        <div class="stat-item glass-card">
+                            <h3>12+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat-item glass-card">
+                            <h3>6</h3>
+                            <p>Industries Served</p>
+                        </div>
+                        <div class="stat-item glass-card">
+                            <h3>C1</h3>
+                            <p>English Level</p>
+                        </div>
+                        <div class="stat-item glass-card">
+                            <h3>SRE</h3>
+                            <p>Certified Practices</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- EXPERIENCE SECTION -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section id="experience" class="section-padding">
+            <div class="container">
+                <h2 class="section-title"><span class="code-comment">// </span>Professional <span>History</span></h2>
+
+                <div class="experience-timeline">
+
+                    <!-- ── Perficient ── -->
+                    <article class="exp-card glass-card" id="exp-perficient">
+                        <div class="exp-header">
+                            <div class="exp-meta">
+                                <span class="exp-date"><i class="ph ph-calendar-blank"></i> Nov 2021 – Present</span>
+                                <span class="exp-duration">4+ years</span>
+                            </div>
+                            <h3>Sr. Software Developer</h3>
+                            <span class="exp-company">Perficient, Inc. <span class="exp-location">| Remote — Cali, Colombia</span></span>
+                            <p class="exp-summary">Senior Developer focused on resolving complex performance issues and modernizing critical systems for global clients. Role centered on flawless technical execution and seamless adaptability to diverse technological ecosystems.</p>
+                        </div>
+                        <div class="exp-body">
+                            <div class="exp-achievement">
+                                <span class="exp-tag tag-sre">SRE & Performance</span>
+                                <span class="exp-client">Client: Caterpillar</span>
+                                <p><strong>Action:</strong> Managed production exceptions and performance bottlenecks using AppDynamics and AWS CloudWatch.</p>
+                                <p><strong>Context:</strong> High-traffic e-Commerce platform for a global manufacturing leader.</p>
+                                <p><strong>Result:</strong> Significantly improved platform uptime, designed monitoring dashboards for early error detection, and fine-tuned database queries to reduce application latency.</p>
+                            </div>
+                            <div class="exp-achievement">
+                                <span class="exp-tag tag-arch">Microservices Migration</span>
+                                <span class="exp-client">Client: BlueCross BlueShield</span>
+                                <p><strong>Action:</strong> Actively participated in migrating monolithic architectures to Spring Boot microservices, enhancing system scalability for the healthcare sector.</p>
+                                <p><strong>Context:</strong> 5-person team performing analysis, design, development, and testing of REST API microservices.</p>
+                                <p><strong>Result:</strong> Enhanced scalability and deployment velocity. Developed mock services and managed Apigee proxy integrations, enabling efficient parallel development workflows with UI teams.</p>
+                            </div>
+                            <div class="exp-achievement">
+                                <span class="exp-tag tag-quality">Quality & Stability</span>
+                                <p><strong>Action:</strong> Implemented Gatling load testing, SonarQube analysis, and automated CI/CD pipelines.</p>
+                                <p><strong>Result:</strong> Ensured zero-downtime production releases with high code coverage and performance standards.</p>
+                            </div>
+                            <div class="exp-stack">
+                                <span class="tech-badge">Java 8</span>
+                                <span class="tech-badge">Spring Boot</span>
+                                <span class="tech-badge">AWS</span>
+                                <span class="tech-badge">AppDynamics</span>
+                                <span class="tech-badge">Apigee</span>
+                                <span class="tech-badge">SQL Server</span>
+                                <span class="tech-badge">Gatling</span>
+                                <span class="tech-badge">Jenkins</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ── Sophos Solutions ── -->
+                    <article class="exp-card glass-card" id="exp-sophos">
+                        <div class="exp-header">
+                            <div class="exp-meta">
+                                <span class="exp-date"><i class="ph ph-calendar-blank"></i> Apr 2021 – Nov 2021</span>
+                                <span class="exp-duration">8 months</span>
+                            </div>
+                            <h3>Full Stack Developer / Technical Lead</h3>
+                            <span class="exp-company">Sophos Solutions (now GFT Technologies) <span class="exp-location">| Remote — Cali, Colombia</span></span>
+                        </div>
+                        <div class="exp-body">
+                            <div class="exp-achievement">
+                                <span class="exp-tag tag-transform">Digital Transformation</span>
+                                <p><strong>Action:</strong> Designed and implemented REST and SOAP services using Oracle Service Bus (OSB), integrating multiple technologies and financial providers.</p>
+                                <p><strong>Context:</strong> Led a 2-person team, mentoring junior developers while building robust integrations.</p>
+                                <p><strong>Result:</strong> Delivered complex service contracts, XSD schemas based on financial canonical messaging, and built custom Java libraries optimizing business logic processes. Served as a technical reference for junior developers, ensuring delivery quality.</p>
+                            </div>
+                            <div class="exp-achievement">
+                                <span class="exp-tag tag-arch">Cloud Migration PoC</span>
+                                <p><strong>Action:</strong> Successfully led Cloud migration Proofs of Concept to AWS microservices.</p>
+                                <p><strong>Result:</strong> Validated architectural decisions that paved the way for modernization of legacy systems.</p>
+                            </div>
+                            <div class="exp-stack">
+                                <span class="tech-badge">Java</span>
+                                <span class="tech-badge">OSB</span>
+                                <span class="tech-badge">WebLogic</span>
+                                <span class="tech-badge">AWS (EC2, RDS)</span>
+                                <span class="tech-badge">Azure DevOps</span>
+                                <span class="tech-badge">Docker</span>
+                                <span class="tech-badge">Oracle DB</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ── Software One ── -->
+                    <article class="exp-card glass-card" id="exp-softwareone">
+                        <div class="exp-header">
+                            <div class="exp-meta">
+                                <span class="exp-date"><i class="ph ph-calendar-blank"></i> Aug 2019 – Apr 2021</span>
+                                <span class="exp-duration">1 yr 9 mo</span>
+                            </div>
+                            <h3>Intermediate Developer Engineer</h3>
+                            <span class="exp-company">Software One / Intergrupo <span class="exp-location">| Cali, Colombia</span></span>
+                        </div>
+                        <div class="exp-body">
+                            <div class="exp-achievement">
+                                <span class="exp-tag tag-finance">Banking Orchestration</span>
+                                <span class="exp-client">Clients: Banco W & Banco ITAÚ</span>
+                                <p><strong>Action:</strong> Led service orchestration using Oracle Service Bus (OSB) for Banco W. Built scalable microservices from user stories for Banco ITAÚ, applying modern architectural standards and clean code principles.</p>
+                                <p><strong>Result:</strong> Enabled seamless integration across multiple banking technologies and providers. Contributed to team growth by providing training and technical guidance to junior- and intermediate-level engineers.</p>
+                            </div>
+                            <div class="exp-achievement">
+                                <span class="exp-tag tag-automation">Process Automation</span>
+                                <span class="exp-client">Client: Ecopetrol</span>
+                                <p><strong>Action:</strong> Created a process automation solution using PowerApps and Power Automate, demonstrating agility in adopting new tools outside the traditional development stack.</p>
+                                <p><strong>Result:</strong> Streamlined internal committee meeting operations, reducing manual effort significantly.</p>
+                            </div>
+                            <div class="exp-stack">
+                                <span class="tech-badge">Java</span>
+                                <span class="tech-badge">C#</span>
+                                <span class="tech-badge">OSB</span>
+                                <span class="tech-badge">PowerApps</span>
+                                <span class="tech-badge">Microservices</span>
+                                <span class="tech-badge">Oracle</span>
+                                <span class="tech-badge">SQL Server</span>
+                                <span class="tech-badge">Azure DevOps</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ── Takúm ── -->
+                    <article class="exp-card glass-card" id="exp-takum">
+                        <div class="exp-header">
+                            <div class="exp-meta">
+                                <span class="exp-date"><i class="ph ph-calendar-blank"></i> Jan 2018 – Jul 2019</span>
+                                <span class="exp-duration">1 yr 7 mo</span>
+                            </div>
+                            <h3>Java Developer Engineer</h3>
+                            <span class="exp-company">Takúm Solutions <span class="exp-location">| Cali, Colombia</span></span>
+                        </div>
+                        <div class="exp-body">
+                            <div class="exp-achievement">
+                                <span class="exp-tag tag-soa">Interoperability</span>
+                                <p><strong>Action:</strong> Optimized business operations by adopting SOA and exposing functionalities through REST services, significantly improving communication between disparate systems.</p>
+                                <p><strong>Result:</strong> Developed robust business logic using Java and built dynamic frontend components with AngularJS, ensuring efficient data consumption and a smooth user experience.</p>
+                            </div>
+                            <div class="exp-achievement">
+                                <span class="exp-tag tag-automation">BPM Automation</span>
+                                <p><strong>Action:</strong> Designed and implemented automated workflows with the Alfresco BPM system.</p>
+                                <p><strong>Result:</strong> Increased operational productivity by effectively reducing manual effort. Handled data persistence using Hibernate and MySQL, while managing cloud assets through AWS S3 integration.</p>
+                            </div>
+                            <div class="exp-stack">
+                                <span class="tech-badge">Java</span>
+                                <span class="tech-badge">AngularJS</span>
+                                <span class="tech-badge">Alfresco BPM</span>
+                                <span class="tech-badge">AWS S3</span>
+                                <span class="tech-badge">Hibernate</span>
+                                <span class="tech-badge">MySQL</span>
+                                <span class="tech-badge">Wildfly</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ── IP Total ── -->
+                    <article class="exp-card glass-card" id="exp-iptotal">
+                        <div class="exp-header">
+                            <div class="exp-meta">
+                                <span class="exp-date"><i class="ph ph-calendar-blank"></i> May 2013 – Jan 2018</span>
+                                <span class="exp-duration">4 yr 9 mo</span>
+                            </div>
+                            <h3>Junior Developer</h3>
+                            <span class="exp-company">IP Total Software <span class="exp-location">| Cali, Colombia</span></span>
+                        </div>
+                        <div class="exp-body">
+                            <div class="exp-achievement">
+                                <span class="exp-tag tag-fullstack">Full SDLC</span>
+                                <p><strong>Action:</strong> Actively engaged in every project phase, including direct requirements gathering (Inception) with stakeholders, analysis, technical design, and implementation.</p>
+                                <p><strong>Context:</strong> Thrived in Agile environments (Scrum, XP), particularly through Mob Programming sessions to tackle complex technical challenges as a team.</p>
+                                <p><strong>Result:</strong> Built robust Java components (Swing &amp; REST services), designed modern responsive web interfaces using HTML, CSS, Bootstrap, and JavaScript. Ensured product integrity through SQA standards, Jenkins, SonarQube, and JUnit. Successfully reduced operational costs and manual effort by automating backend jobs and internal workflows.</p>
+                            </div>
+                            <div class="exp-stack">
+                                <span class="tech-badge">Java</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">Bootstrap</span>
+                                <span class="tech-badge">Hibernate/JPA</span>
+                                <span class="tech-badge">REST APIs</span>
+                                <span class="tech-badge">Oracle</span>
+                                <span class="tech-badge">PostgreSQL</span>
+                                <span class="tech-badge">Jenkins</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- TECHNICAL DNA SECTION -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section id="tech-dna" class="section-padding">
+            <div class="container">
+                <h2 class="section-title"><span class="code-comment">// </span>Technical <span>DNA</span></h2>
+                <div class="dna-grid">
+
+                    <div class="dna-card glass-card" id="dna-backend">
+                        <div class="dna-icon"><i class="ph ph-code"></i></div>
+                        <h3>Backend</h3>
+                        <div class="dna-tags">
+                            <span class="dna-tag">Java (8/11/17+)</span>
+                            <span class="dna-tag">Spring Boot</span>
+                            <span class="dna-tag">Spring Batch</span>
+                            <span class="dna-tag">Spring Security</span>
+                            <span class="dna-tag">Hibernate / JPA</span>
+                            <span class="dna-tag">C#</span>
+                            <span class="dna-tag">Node.js</span>
+                        </div>
+                    </div>
+
+                    <div class="dna-card glass-card" id="dna-infra">
+                        <div class="dna-icon"><i class="ph ph-cloud"></i></div>
+                        <h3>Infrastructure & DevOps</h3>
+                        <div class="dna-tags">
+                            <span class="dna-tag">AWS (EC2, RDS, S3)</span>
+                            <span class="dna-tag">Docker</span>
+                            <span class="dna-tag">Kubernetes</span>
+                            <span class="dna-tag">Jenkins</span>
+                            <span class="dna-tag">Azure DevOps</span>
+                            <span class="dna-tag">Terraform</span>
+                            <span class="dna-tag">AppDynamics</span>
+                            <span class="dna-tag">CloudWatch</span>
+                        </div>
+                    </div>
+
+                    <div class="dna-card glass-card" id="dna-data">
+                        <div class="dna-icon"><i class="ph ph-database"></i></div>
+                        <h3>Data & Middleware</h3>
+                        <div class="dna-tags">
+                            <span class="dna-tag">Apache Kafka</span>
+                            <span class="dna-tag">NATS</span>
+                            <span class="dna-tag">Oracle Service Bus</span>
+                            <span class="dna-tag">PostgreSQL</span>
+                            <span class="dna-tag">MySQL</span>
+                            <span class="dna-tag">MongoDB</span>
+                            <span class="dna-tag">Oracle DB</span>
+                            <span class="dna-tag">SQL Server</span>
+                        </div>
+                    </div>
+
+                    <div class="dna-card glass-card" id="dna-arch">
+                        <div class="dna-icon"><i class="ph ph-graph"></i></div>
+                        <h3>Architecture & Patterns</h3>
+                        <div class="dna-tags">
+                            <span class="dna-tag">Microservices</span>
+                            <span class="dna-tag">Event-Driven (EDA)</span>
+                            <span class="dna-tag">SOA</span>
+                            <span class="dna-tag">REST / SOAP</span>
+                            <span class="dna-tag">CQRS</span>
+                            <span class="dna-tag">Domain-Driven Design</span>
+                            <span class="dna-tag">CI/CD Pipelines</span>
+                        </div>
+                    </div>
+
+                    <div class="dna-card glass-card" id="dna-observability">
+                        <div class="dna-icon"><i class="ph ph-chart-line"></i></div>
+                        <h3>Observability & Testing</h3>
+                        <div class="dna-tags">
+                            <span class="dna-tag">Prometheus</span>
+                            <span class="dna-tag">Grafana</span>
+                            <span class="dna-tag">AppDynamics</span>
+                            <span class="dna-tag">JUnit / Mockito</span>
+                            <span class="dna-tag">Gatling</span>
+                            <span class="dna-tag">SonarQube</span>
+                        </div>
+                    </div>
+
+                    <div class="dna-card glass-card" id="dna-languages">
+                        <div class="dna-icon"><i class="ph ph-translate"></i></div>
+                        <h3>Languages</h3>
+                        <div class="dna-tags">
+                            <span class="dna-tag dna-tag--accent">English — C1 Full Professional</span>
+                            <span class="dna-tag dna-tag--accent">Spanish — Native</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- INNOVATION LAB (PROJECTS) SECTION -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section id="innovation-lab" class="section-padding">
+            <div class="container">
+                <h2 class="section-title"><span class="code-comment">// </span>Innovation <span>Lab</span></h2>
+                <p class="section-subtitle">Personal projects showcasing modern stack expertise</p>
+
+                <div class="projects-grid">
+
+                    <article class="project-card glass-card" id="project-cresta">
+                        <div class="project-header">
+                            <i class="ph ph-scissors"></i>
+                            <span class="project-type">SaaS Platform</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Cresta</h3>
+                            <a href="https://cr3sta.com/" target="_blank" rel="noopener noreferrer" class="project-url">cr3sta.com <i class="ph ph-arrow-square-out"></i></a>
+                            <p>Full-stack SaaS platform for salon operations management and appointment automation. Built with multi-tenant architecture, real-time notifications, and WhatsApp integration.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Spring Boot</span>
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">PostgreSQL</span>
+                                <span class="tech-badge">AWS</span>
+                                <span class="tech-badge">Docker</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card glass-card" id="project-apexis">
+                        <div class="project-header">
+                            <i class="ph ph-barbell"></i>
+                            <span class="project-type">Web Platform</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Apexis.fit</h3>
+                            <a href="https://www.apexis.fit/en" target="_blank" rel="noopener noreferrer" class="project-url">apexis.fit <i class="ph ph-arrow-square-out"></i></a>
+                            <p>Comprehensive web platform for fitness coaching and client management. Features workout tracking, progress analytics, and coach-client communication tools.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Java</span>
+                                <span class="tech-badge">Spring Boot</span>
+                                <span class="tech-badge">PostgreSQL</span>
+                                <span class="tech-badge">REST APIs</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card glass-card" id="project-fintech">
+                        <div class="project-header">
+                            <i class="ph ph-lightning"></i>
+                            <span class="project-type">Architecture POC</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Fintech-Rewards</h3>
+                            <p class="project-url">Event-Driven Architecture</p>
+                            <p>Proof of concept migrating legacy systems to high-performance event-driven messaging. Hybrid dual broker strategy with Kafka for durability and NATS for ultra-low latency (&lt;50ms fraud validation).</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Java 21</span>
+                                <span class="tech-badge">Spring Boot 3</span>
+                                <span class="tech-badge">Kafka</span>
+                                <span class="tech-badge">NATS</span>
+                                <span class="tech-badge">Docker</span>
+                                <span class="tech-badge">Microservices</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- EDUCATION & CERTIFICATIONS SECTION -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section id="education" class="section-padding">
+            <div class="container">
+                <h2 class="section-title"><span class="code-comment">// </span>Education & <span>Certifications</span></h2>
+
+                <div class="edu-grid">
+                    <div class="edu-column">
+                        <h3 class="edu-heading"><i class="ph ph-graduation-cap"></i> Education</h3>
+
+                        <div class="edu-item glass-card" id="edu-degree">
+                            <h4>Systems Engineer</h4>
+                            <span class="edu-institution">Institución Universitaria Antonio José Camacho</span>
+                            <span class="edu-date">2014 – 2017</span>
+                        </div>
+                        <div class="edu-item glass-card" id="edu-diploma-sw">
+                            <h4>Advanced Course in Software Engineering</h4>
+                            <span class="edu-institution">Institución Universitaria Antonio José Camacho</span>
+                            <span class="edu-date">2016 — 120 hours</span>
+                        </div>
+                        <div class="edu-item glass-card" id="edu-diploma-net">
+                            <h4>LAN/WAN Administration & Networking</h4>
+                            <span class="edu-institution">Institución Universitaria Antonio José Camacho</span>
+                            <span class="edu-date">2013 — 240 hours</span>
+                        </div>
+                        <div class="edu-item glass-card" id="edu-tech">
+                            <h4>Systems Technologist — Software Development</h4>
+                            <span class="edu-institution">Institución Universitaria Antonio José Camacho</span>
+                            <span class="edu-date">2009 – 2013</span>
+                        </div>
+                    </div>
+
+                    <div class="edu-column">
+                        <h3 class="edu-heading"><i class="ph ph-certificate"></i> Certifications</h3>
+
+                        <div class="edu-item glass-card" id="cert-aws-business">
+                            <h4>AWS Partner: Accreditation (Business)</h4>
+                            <span class="edu-institution">Amazon Web Services</span>
+                        </div>
+                        <div class="edu-item glass-card" id="cert-aws-cloud">
+                            <h4>AWS Partner: Cloud Economics Accreditation</h4>
+                            <span class="edu-institution">Amazon Web Services</span>
+                        </div>
+                        <div class="edu-item glass-card" id="cert-scrum-foundation">
+                            <h4>Scrum Foundation Certificate</h4>
+                            <span class="edu-institution">CertiProf</span>
+                            <span class="edu-date">2020</span>
+                        </div>
+                        <div class="edu-item glass-card" id="cert-scrum-dev">
+                            <h4>Scrum Developer</h4>
+                            <span class="edu-institution">Scrum Agile Institute</span>
+                            <span class="edu-date">2016</span>
+                        </div>
+                        <div class="edu-item glass-card" id="cert-copnia">
+                            <h4>Professional Card — COPNIA</h4>
+                            <span class="edu-institution">National Professional Engineering Council</span>
+                            <span class="edu-date">2018</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- CONTACT / FOOTER -->
+    <!-- ═══════════════════════════════════════════ -->
     <footer id="contact">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-info">
                     <h2>Let's Build <span>Together</span></h2>
                     <p>
-                        Looking for a Senior Developer to architect your next big idea? 
-                        Let's discuss how we can bring high-tech logic to your business.
+                        Looking for a Senior Backend Engineer to architect your next high-performance system? 
+                        Let's discuss how we can bring engineering excellence to your team.
                     </p>
                     <div class="contact-details">
-                        <a href="mailto:camilo.nustes@gmail.com" class="contact-item">
+                        <a href="mailto:camilo.nustes@gmail.com" class="contact-item" id="contact-email">
                             <i class="ph ph-envelope-simple"></i> camilo.nustes@gmail.com
                         </a>
                         <span class="contact-item">
-                            <i class="ph ph-map-pin"></i> Cali, Colombia (Remote)
+                            <i class="ph ph-map-pin"></i> Cali, Colombia (Remote Available)
                         </span>
                         <span class="contact-item">
                             <i class="ph ph-phone"></i> (+57) 313 780 5499
                         </span>
                     </div>
                 </div>
-                
+
                 <div class="footer-links">
-                    <a href="https://linkedin.com/in/camilo-andres-nustes-mendoza/" target="_blank" class="social-link" aria-label="LinkedIn">
+                    <a href="https://linkedin.com/in/camilo-andres-nustes-mendoza/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn" id="social-linkedin">
                         <i class="ph ph-linkedin-logo"></i>
                     </a>
-                    <a href="#" class="social-link" aria-label="GitHub">
+                    <a href="https://github.com/cnustes" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub" id="social-github">
                         <i class="ph ph-github-logo"></i>
                     </a>
                 </div>
             </div>
-            
+
             <div class="copyright">
-                &copy; 2025 Camilo Ñustes - CottonTopTech. All Rights Reserved.
+                &copy; 2026 Camilo Ñustes. All Rights Reserved.
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
